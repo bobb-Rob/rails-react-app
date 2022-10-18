@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GreetingsController < ApplicationController
   def index
     # @contents = Content.all
@@ -6,7 +8,7 @@ class GreetingsController < ApplicationController
     @greetings = Greeting.all
     @greeting = @greetings.sample
 
-    respond_to do |format|      
+    respond_to do |format|
       format.json { render json: @greeting, status: :ok }
     end
   end
